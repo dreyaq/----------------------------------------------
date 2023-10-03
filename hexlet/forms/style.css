@@ -1,0 +1,17 @@
+h1{
+    margin-left: 100px;
+    margin-bottom: 0px;
+}
+body {
+    background-color: aquamarine;
+    width: 400px;
+    padding: 20px;
+}
+button{
+    margin-top: 10px;
+    margin-left: 140px;
+}
+form fieldset{
+    background-color: aliceblue;
+    border-radius: 10px;
+}
