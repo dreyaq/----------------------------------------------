@@ -22,6 +22,7 @@ header{
     margin-top: -20px;
     padding-right: 60px;
     padding-bottom: 10px;
+    opacity: 90%;
     
 }
 nav{
@@ -154,13 +155,12 @@ h3{
 .main_page img {
     max-width: 100%;
 }
-iframe{
+.cases iframe{
     width: 456px;
     height: 811px;
     flex-shrink: 0;
     border-radius: 50px;
     scale: 85%;
-    margin-left: 20px;
     margin-top: -80px;
 }
 
@@ -189,11 +189,6 @@ iframe{
     line-height: normal;
 }
 
-.cases div{
-    padding: 0px;
-    margin: 0px;
-}
-
 .cases p{
     color: #FFF;
     font-family: Gilroy;
@@ -201,32 +196,52 @@ iframe{
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    margin-top: -60px;
 }
 
-#p_dentist{
-    margin-left: 175px;
-    margin-top: -65px;
+.cases div{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    
+}
+.cases .video{
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    justify-content: flex-start;
 }
 
-#p_cosmo{
-    margin-left: 660px;
-    margin-top: -63px;
+.cases .less3{
+    display: flex;
+    justify-content: left;
+    flex-flow: row wrap;
+    margin-left: 40px;
 }
 
-#p_lawyer{
-    margin-left: 1160px;
-    margin-top: -62px;
+/* Удалить! */
+.cases form{
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
-#p_surgeon{
-    margin-left: 90px;
-    margin-top: -68px;
+fieldset{
+    width: 600px;
 }
-#p_befit{
-    margin-left: 990px;
-    margin-top: -62px;
-    text-align: center;
+input{
+    background: none;
+    color: #FFF;
 }
-#p_pizza{
-    margin-left: 120px;
-    margin-top: -68px;
+:focus{
+    color: red;
 }
+::placeholder{
+    background-color: aqua;
+}
+textarea{
+    resize: none;
+}
+/* Удалить! */
