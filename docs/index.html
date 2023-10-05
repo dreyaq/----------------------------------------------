@@ -13,18 +13,36 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="#content" id="button_main">Главная</a>
-      <a href="https://t.me/dreyaq" target="_blank"><img src="./assets/img/tg.png" id="tg" alt="Telegram" /></a>
-      <a href="https://vk.com/dreyaq" target="_blank"><img src="./assets/img/vk.png" id="vk" alt="VK" /></a>
-      <a href="https://www.instagram.com/dreyaq" target="_blank"><img src="./assets/img/inst.png" id="inst"
-          alt="Instagram" /></a>
-      <a href="" id="button_about_me">Обо мне</a>
-      <a href="#cases" id="button_works">Примеры работ</a>
-      <a href="" id="button_feedback">Отзывы</a>
-      <a href="" id="button_buy">Заказать</a>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <div class="header_body">
+        <a href="#content" class="header_logo">Главная</a>
+        <div class="header_links">
+        <a href="https://t.me/dreyaq" target="_blank"><img src="./assets/img/tg.png" id="tg" alt="Telegram" /></a>
+        <a href="https://vk.com/dreyaq" target="_blank"><img src="./assets/img/vk.png" id="vk" alt="VK" /></a>
+        <a href="https://www.instagram.com/dreyaq" target="_blank"><img src="./assets/img/inst.png" id="inst" alt="Instagram" /></a>
+        </div>
+        <div class="header_burger">
+          <span></span>
+        </div>
+        <nav class="header_menu">
+          <ul class="header_list">
+            <li>
+              <a href="" class="header_link">Обо мне</a>
+            </li>
+            <li>
+              <a href="#cases" class="header_link">Примеры работ</a>
+            </li>
+            <li>
+              <a href="" class="header_link">Отзывы</a>
+            </li>
+            <li>
+              <a href="" class="header_link" id="button_buy">Заказать</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
   <main>
     <section class="main_page">
@@ -46,6 +64,7 @@
       <h1 id="cases">
         Примеры работ
       </h1>
+      
       <h2>
         Экспертные ролики Reel's
       </h2>
@@ -159,6 +178,8 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.095560377007!2d37.47771961271618!3d55.669938398257855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54dc1d23b51c3%3A0x74763ed59c81ccb6!2z0KDQotCjINCc0JjQoNCt0JA!5e0!3m2!1sru!2sru!4v1696366672817!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   <!-- Удалить -->
   </main>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
