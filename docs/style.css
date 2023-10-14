@@ -1,3 +1,17 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/inter-v13-latin-regular.woff2') format('woff2');
+  }
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/open-sans-v36-latin-regular.woff2') format('woff2');
+}
 html
 {
     width: 100%;
@@ -250,10 +264,8 @@ h3{
     display: none;
 }
 
-@media (max-width: 767px) {
-    .content{
-        margin-left: -70px;
-    }
+
+@media (max-width: 1230px) {
     .cases{
         display: block;
     }
@@ -263,6 +275,11 @@ h3{
     #cases{
         font-size: 50px;
         display: block;
+        margin-left: 0px;
+    }
+    .cases h2{
+        margin-left: 15px;
+        font-size: 39px;
     }
     .header_burger{
         z-index: 100;
@@ -298,6 +315,9 @@ h3{
     }
     .main_page{
         scale: 80%;
+    }
+    .main_page .content{
+        scale: 120%;
     }
     header::before{
         z-index: 5;
@@ -357,15 +377,37 @@ h3{
     .header_burger.active span{
         transform: scale(0);
     }
-    .image{
-        display: none;
+    #buy_under_text{
+        margin-top: 0px;
     }
-    
 }
 
 @media (max-width: 912px) {
     .cases .video_div{
         display: inline;
         
+    }
+}
+@media (max-width: 860px) {
+    .content h3{
+        width: auto;
+    }
+    .content h1{
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1368px){
+    .image{
+        display: none;
+    }
+    .cases .video_div{
+        justify-content: space-evenly;
+    }
+    .cases h2{
+        text-align: center;
+    }
+    .main_page{
+        justify-content: space-around;
     }
 }
