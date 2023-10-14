@@ -235,17 +235,15 @@ h3{
     
 }
 .cases .video{
-    display: flex;
+    display: flex;  
     align-items: center;
     flex-flow: column wrap;
     justify-content: flex-start;
 }
-
-.cases .less3{
+.cases .video_div{
     display: flex;
-    justify-content: left;
-    flex-flow: row wrap;
-    margin-left: 40px;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 .header_burger{
@@ -253,17 +251,6 @@ h3{
 }
 
 @media (max-width: 767px) {
-    .cases div{
-        display: flex;
-        align-content: center;
-        flex-flow: column nowrap;
-        
-    }
-    .cases .less3{
-        display: flex;
-        justify-content: center;
-        margin: 0px;
-    }
     .content{
         margin-left: -70px;
     }
@@ -376,30 +363,9 @@ h3{
     
 }
 
-
-/* Удалить! */
-.cases form{
-    color: #FFF;
-    font-family: Gilroy;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+@media (max-width: 912px) {
+    .cases .video_div{
+        display: inline;
+        
+    }
 }
-fieldset{
-    width: 600px;
-}
-input{
-    background: none;
-    color: #FFF;
-}
-:focus{
-    color: red;
-}
-::placeholder{
-    background-color: aqua;
-}
-textarea{
-    resize: none;
-}
-/* Удалить! */
