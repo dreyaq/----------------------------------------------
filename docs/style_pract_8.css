@@ -1,0 +1,225 @@
+html
+{
+    width: 100%;
+    min-height: 100%;
+    background: #010101;
+    background: rgb(12, 13, 22);
+}   
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(3, 220px);
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas: 
+    "first first second third"
+    "fourth five second six"
+    "fourth seven seven seven";
+    gap: 10px 10px;
+    margin: 130px;
+    margin-bottom: 0px;
+    scale: 100%;
+}
+.grid_element{
+    background-color: rgb(39, 39, 39);
+    
+}
+.grid_element:hover{
+    background-color: rgb(133, 50, 50);
+    transition: 1s;
+}
+.grid_element{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+}
+.grid_element_1{
+    grid-area: first;
+}
+.grid_element_2{
+    grid-area: second;
+}
+.grid_element_3{
+    grid-area: third;
+}
+.grid_element_4{
+    grid-area: fourth;
+}
+.grid_element_5{
+    grid-area: five;
+}
+.grid_element_6{
+    grid-area: six;
+}
+.grid_element_7{
+    grid-area: seven;
+}
+
+h3,p, a{
+    font-family: Inter;
+}
+.footer p, .footer a{
+    font-size: 16px;
+}
+
+.footer h3{
+    font-size: 30px;
+    color: rgb(78, 127, 199);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Стили для блоков внутри футера */
+.menu, .contacts, .about-me {
+    padding: 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.menu:hover, .contacts:hover, .about-me:hover {
+    transform: scale(1.03);
+}
+
+.menu h3, .contacts h3, .about-me h3, .footer ul{
+    margin: 0;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 5px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #007BFF;
+}
+.set_pos_center{
+    display: flex;
+    justify-content: center;
+    margin-left: 1100px;
+}
+.like-button {
+    display: inline-block;
+    background-color: #ccc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.5s;
+}
+
+.like-icon {
+    font-size: 40px;
+}
+
+.like-count {
+    font-family: Inter;
+    font-size: 46px;
+    margin-left: 10px;
+}
+
+.draw-button {
+    margin-left: 260px;
+    font-family: Inter;
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('./assets/img/delete/heart.png') no-repeat;
+    background-size: contain;
+}
+
+/* Адаптивность */
+
+@media (max-width: 1120px){
+    .grid_container{
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "first"
+        "second"
+        "third"
+        "fourth"
+        "five"
+        "six"
+        "seven";
+    }
+}

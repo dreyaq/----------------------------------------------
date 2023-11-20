@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая капча</title>
+    <style>
+        #captchaDiv {
+            margin-bottom: 10px;
+        }
+
+        #error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        #submitBtn {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        #submitBtn.active {
+            cursor: pointer;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div id="captchaDiv">
+
+</div>
+
+<div id="error-message"></div>
+
+<input type="text" id="captchaInput" placeholder="Введите текст или сумму чисел" oninput="validateInput()">
+
+<button id="submitBtn" class="inactive" onclick="submitForm()">Отправить форму</button>
+
+<button onclick="accumulator.read()">Добавить число</button>
+
+<button onclick="showValue()">Показать текущее значение</button>
+
+<div>
+    <div>
+        <label for="originalString">Введите текст:</label>
+        <input type="text" id="originalString">
+    </div>
+
+    <div>
+        <label for="maxLength">Максимальная длина:</label>
+        <input type="number" id="maxLength" min="1">
+    </div>
+
+    <button onclick="truncateString()">Усечь строку</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+    let randomNumbers;
+
+    function generateRandomString(length) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+        let result = '';
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            result += characters.charAt(randomIndex);
+        }
+        return result;
+    }
+
+    function generateRandomNumbers() {
+        const num1 = Math.floor(Math.random() * 10);
+        const num2 = Math.floor(Math.random() * 10);
+        return { num1, num2 };
+    }
+
+    function generateCaptcha() {
+        const captchaDiv = document.getElementById('captchaDiv');
+        const randomString = generateRandomString(5);
+        randomNumbers = generateRandomNumbers();
+
+        const captchaText = `Введите текст: ${randomString}`;
+        const numbersText = `Введите сумму чисел: ${randomNumbers.num1} + ${randomNumbers.num2}`;
+
+        captchaDiv.innerHTML = `<p>${Math.random() < 0.5 ? captchaText : numbersText}</p>`;
+    }
+
+    function submitForm() {
+        const captchaInput = document.getElementById('captchaInput').value;
+        const errorMessage = document.getElementById('error-message');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (isEmpty(captchaInput)) {
+            errorMessage.textContent = 'Ошибка: ввод не может быть пустым.';
+            return;
+        }
+
+        const captchaDiv = document.getElementById('captchaDiv');
+        const captchaText = captchaDiv.textContent.trim();
+
+        if (captchaText.includes('текст') && captchaInput === captchaText.split(':')[1].trim()) {
+            errorMessage.textContent = '';
+            alert('Форма отправлена!');
+        } else if (captchaText.includes('чисел')) {
+            const sum = randomNumbers.num1 + randomNumbers.num2;
+            if (parseInt(captchaInput) === sum) {
+                errorMessage.textContent = '';
+                alert('Форма отправлена!');
+            } else {
+                errorMessage.textContent = 'Ошибка: неправильная сумма чисел.';
+            }
+        } else {
+            errorMessage.textContent = 'Ошибка: неправильный текст.';
+        }
+    }
+
+    function validateInput() {
+        const captchaInput = document.getElementById('captchaInput').value;
+        const submitBtn = document.getElementById('submitBtn');
+
+        const captchaDiv = document.getElementById('captchaDiv');
+        const captchaText = captchaDiv.textContent.trim();
+
+        submitBtn.classList.remove('active');
+
+        if (captchaText.includes('текст') && captchaInput === captchaText.split(':')[1].trim()) {
+            submitBtn.classList.add('active');
+        } else if (captchaText.includes('чисел')) {
+            const sum = randomNumbers.num1 + randomNumbers.num2;
+            if (parseInt(captchaInput) === sum) {
+                submitBtn.classList.add('active');
+            }
+        }
+    }
+
+    function isEmpty(value) {
+        return value.trim() === '';
+    }
+
+    generateCaptcha();
+
+
+
+
+    function Accumulator(startingValue) {
+        this.value = startingValue;
+
+        this.read = function() {
+            let userInput = prompt('Введите новое число', '');
+            userInput = parseFloat(userInput);
+
+            if (!isNaN(userInput)) {
+                this.value += userInput;
+            } else {
+                alert('Некорректный ввод. Введите число.');
+            }
+        };
+    }
+
+    const accumulator = new Accumulator(10);
+
+
+    function showValue() {
+        alert('Текущее значение в корзине: ' + accumulator.value);
+    }
+
+
+
+
+
+
+    function truncate(str, maxlength) {
+            if (str.length > maxlength) {
+                return str.slice(0, maxlength) + "…";
+            } else {
+                return str;
+            }
+        }
+
+    function truncateString() {
+        var originalString = document.getElementById("originalString").value;
+        var maxLength = document.getElementById("maxLength").value;
+        
+        var result = truncate(originalString, maxLength);
+        
+        document.getElementById("result").innerHTML = `<div> Результат:  + ${result} <div>`;
+    }
+</script>
+
+</body>
+</html>
