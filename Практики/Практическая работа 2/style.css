@@ -1,0 +1,45 @@
+h1,h2,h3,h4{
+    font-family: 'Bebas Neue', sans-serif;
+}
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: flex-end;
+}
+aside {
+    display: block;
+    float: right;
+    margin-right: 50px;
+}
+.text1:hover {
+    color: blue;
+    padding-left: 10px;
+    transition: 1s;
+    border: 10px solid red;
+}
+a:active {
+    color:aqua;
+}
+a:visited {
+    color:brown;
+}
+
+ul > li {
+    color: purple;
+}
+
+
+ul ~ p {
+    color: green;
+}
+
+ul + P {
+    color: orange;
+}
+
+.navnav {
+    background: var(--TextGrad, linear-gradient(270deg, #B605AF 0%, #4AFFFB 101.25%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

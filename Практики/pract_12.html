@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Уведомления и Список</title>
+  <style>
+    body {
+        background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #notification-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      max-width: 300px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #notification-counter {
+      margin-bottom: 10px;
+    }
+
+    #notification-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s;
+    }
+    .notification {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .notification.hide {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    #notification-button.red {
+      background-color: #ff0000;
+    }
+
+    #list-container {
+      max-width: 300px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    #list {
+      list-style: none;
+      padding: 0;
+    }
+
+    #list li {
+      margin: 5px 0;
+      padding: 8px;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    #add-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 3px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    #add-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div id="notification-container">
+  <div id="notification-counter">Уведомлений: <span id="count">0</span></div>
+  <button id="notification-button" onclick="pauseNotifications()">Приостановить уведомления</button>
+</div>
+
+<div id="list-container">
+  <h2>Создание списка</h2>
+  <ul id="list"></ul>
+</div>
+<button id="add-button" onclick="createListItem()">Добавить пункт</button>
+<button onclick="showNotification_button({ content: 'Пример уведомления' })" id="add-button">Показать уведомление</button>
+<script>
+  let notificationCount = 0;
+  let notificationInterval;
+
+  function showNotification() {
+    notificationCount++;
+    document.getElementById('count').innerText = notificationCount;
+
+    const notificationElement = document.createElement('div');
+    notificationElement.innerText = `Новое уведомление #${notificationCount}`;
+
+    document.getElementById('notification-container').appendChild(notificationElement);
+  }
+
+  function startNotificationInterval() {
+    document.getElementById('notification-button').classList.remove('red');
+    notificationInterval = setInterval(showNotification, 3000);
+  }
+
+  function pauseNotifications() {
+    document.getElementById('notification-button').classList.add('red');
+    clearInterval(notificationInterval);
+    setTimeout(() => {
+      startNotificationInterval();
+    }, 10000);
+  }
+
+  function createListItem() {
+    let listItemContent = prompt('Введите содержимое пункта списка:');
+    if (listItemContent !== null && listItemContent.trim() !== '') {
+      const listItem = document.createElement('li');
+      listItem.textContent = listItemContent;
+
+      document.getElementById('list').appendChild(listItem);
+
+      createListItem();
+    }
+  }
+
+
+  function showNotification_button(options) {
+    const notificationElement = document.createElement('div');
+    notificationElement.classList.add('notification');
+    notificationElement.innerHTML = options.content;
+
+    document.body.appendChild(notificationElement);
+
+    setTimeout(() => {
+      notificationElement.classList.add('hide');
+      setTimeout(() => {
+        notificationElement.remove();
+      }, 500);
+    }, 1500);
+  }
+
+  startNotificationInterval();
+</script>
+
+</body>
+</html>
