@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Усов Егор — видеомонтаж</title>
+    <meta name="viewport" content="width=device-width, initialscale=1.0" charset="utf-8" />
+    <link rel="icon" type="image/png" href="./assets/img/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_body">
+                <a href="index.html" class="header_logo">Главная</a>
+                <div class="header_links">
+                    <a class="btn_top" href="https://t.me/dreyaq" target="_blank"><i class="fa-brands fa-telegram"
+                            style="color: #000000;"></i></a>
+                    <a class="btn_top" href="https://vk.com/dreyaq" target="_blank"><i class="fa-brands fa-vk"
+                            style="color: #000000;"></i></a>
+                    <a class="btn_top" href="https://www.instagram.com/dreyaq" target="_blank"><i
+                            class="fa-brands fa-instagram " style="color: #000000;"></i></a>
+                </div>
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li>
+                            <a href="about_me.html" class="header_link">Обо мне</a>
+                        </li>
+                        <li>
+                            <a href="works.html" class="header_link">Примеры работ</a>
+                        </li>
+                        <li>
+                            <a href="feedback.html" class="header_link">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header_link" id="button_buy">Заказать</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="price">
+            <h1 class="grn_txt">Как получается цена?</h1>
+            <div class="price_main_div">
+                <img src="./assets/img/money.png">
+                <p>
+                    <b>Что нужно от вас: </b> <br>
+                    - Чёткое ТЗ<br>
+                    - Видеоматериалы<br>
+                    -Возможные референсы<br>
+                    <b>Процесс работы:</b> <br>
+                    Обсуждаем с Вами ваши предпочтения,
+                    обговариваем цену. После я Вам скидываю демонстрационный ролик, вносим правки и когда Вас будет
+                    устраивать результат - производится оплата, и я скидываю финальный ролик.
+                </p>
+            </div>
+        </section>
+        <section class="price_example">
+            <h1 class="grn_txt">Примеры и цены</h1>
+            <div class="price_for_video">
+                <iframe id="video_1" class="video_as_example"
+                    src="https://www.youtube.com/embed/1PLMCSVRXIY?rel=0&loop=1" title="Стоматолог и косметолог"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div class="about_video">
+                    <div>
+                        <h2 id="h2_1">Reels</h2>
+                        <p>Стоимость за рилс зависит от
+                            сложности монтажа, присутствия
+                            или отсутствия индивидуализации.
+                            Также возможна полная разработка
+                            сценария и отбор материала.</p>
+                    </div>
+                    <div class="price">
+                        <p>Цена:</p>
+                        <p class="orng_txt">800</p>
+                        <p>+ ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="price_for_video">
+                <iframe id="video_2" class="video_as_example"
+                    src="https://www.youtube.com/embed/L0ip2Wmu-yI?rel=0&loop=1" title="Pizzalini" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div class="about_video">
+                    <div>
+                        <h2 id="h2_2">Рекламные Reels</h2>
+                        <p>Стоимость за рекламный ролик
+                            зависит от количества материала,
+                            динамики съёмки.
+                            Графический дизайн разрабатывается
+                            индивидуально для каждого клиента.</p>
+                    </div>
+                    <div class="price">
+                        <p>Цена:</p>
+                        <p class="orng_txt">1500</p>
+                        <p>+ ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="price_for_video">
+                <iframe id="video_3" class="video_as_example"
+                    src="https://www.youtube.com/embed/92lhLDKtfhE?rel=0&loop=1" title="Защита прав призывника"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div class="about_video">
+                    <div>
+                        <h2 id="h2_3">Маркетинговые</h2>
+                        <p>Стоимость за конечный ролик для
+                            маркетплейса в основном не
+                            отличается от средней. За
+                            исключением моментов, когда
+                            нужна графика в видео.</p>
+                    </div>
+                    <div class="price">
+                        <p>Цена:</p>
+                        <p class="orng_txt">500</p>
+                        <p>+ ₽</p>
+                    </div>
+                </div>
+            </div>
+            <div class="price_for_video">
+                <div class="about_video">
+                    <div>
+                        <iframe id="video_4" class="video_as_example"
+                            src="https://www.youtube.com/embed/tk2gH7qT9nI?rel=0&loop=1"
+                            title="Гидронефроз у детей — выявление и лечение в Москве по полису ОМС" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <div>
+                            <h2 id="h2_4">YouTube</h2>
+                            <p class="youtube_text">
+                                Стоимость за
+                                горизонтальный ролик
+                                зависит от исходных
+                                материалов, работы со
+                                звуком и картинкой.
+                                Графический дизайн разрабатывается
+                                индивидуально для каждого клиента, если это требуется.</p>
+                        </div>
+                    </div>
+                    <div class="price" style="display: flex; justify-content: flex-end;">
+                        <p>Цена:</p>
+                        <p class="orng_txt">2000</p>
+                        <p>+ ₽</p>
+                    </div>
+                </div>
+            </div>
+            <h1 id="wait_for_orders">Жду ваших заказов!</h1>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <h1>@dreyaq</h1>
+            <p>
+                🌎 Чем я занимаюсь: <br>
+                • Мероприятия <br>
+                • Тrаvеl-видео <br>
+                • Экспертные видео <br>
+                • Рекламные видео <br>
+                • Короткие видео <br>
+            </p>
+            <ul>
+                <li>
+                    <a href="about_me.html">Обо мне</a>
+                </li>
+                <li>
+                    <a href="works.html">Примеры работ</a>
+                </li>
+                <li>
+                    <a href="feedback.html">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">Сделать заказ</a>
+                </li>
+            </ul>
+            <div class="my_locations">
+                <a>+7-987-361-09-61</a>
+                <a>Город Москва</a>
+                <div class="footer_links">
+                    <a href="https://t.me/dreyaq" target="_blank"><i class="fa-brands fa-telegram"
+                            style="color: #fff;"></i></a>
+                    <a href="https://vk.com/dreyaq" target="_blank"><i class="fa-brands fa-vk"
+                            style="color: #fff;"></i></a>
+                    <a href="https://www.instagram.com/dreyaq" target="_blank"><i class="fa-brands fa-instagram "
+                            style="color: #fff;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/ae513ee291.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
