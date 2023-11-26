@@ -916,7 +916,11 @@ footer {
         -webkit-mask-position: -50%;
     }
 }
-
+.learning p a{
+    -webkit-mask-image: linear-gradient(90deg, rgba(0, 255, 0, .3) 0%, #ff2626 50%, rgba(255, 0, 0, .3) 100%);
+    -webkit-mask-size: 200%;
+    animation: wave 2s infinite;
+}
 .about_me_main h1 {
     margin: 20px;
 }
@@ -995,6 +999,122 @@ footer {
     width: 1200px;
     height: 675px;
     border-radius: 100px;
+}
+.person_img h2{
+    display: inline;
+    font-family: Inter;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(270deg, #5824EC 0%, #4AFFFB 101.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.person_img img{
+    max-width: 415px;
+    max-height: 600px;
+    margin: 0;
+    border-radius: 50px;
+}
+.person_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.person_info p{
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-top: 40px;
+    margin-left: 40px
+}
+.person_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    margin-bottom: 40px;
+}
+.video_div_youtube h2{
+    color: #FFF;
+    display: inline;
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.works_main .center_txt .orng_txt {
+    margin: 0px;
+    margin-top: 30px;
+}
+.video_div_youtube .video_div{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.video_div_youtube .video_div iframe:not(.video_as_example){
+    width: 388px;
+    height: 689px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: none;
+}
+.video_div_youtube .video_as_example{
+    margin: 0px;
+    margin-top: 30px;
+    float: left;
+    width: 720px;
+    height: 405px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+.video_div_youtube p{
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 0px;
+}
+.video_div_youtube .price{
+    display: flex;
+    justify-content: flex-end;
+    & p{
+        font-weight: bold;
+        font-size: 60px;
+        margin:5px;
+        margin-top: 20px;
+    }
+}
+.link_to_works h2{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin: 0px;
+}
+.link_to_works h2 a{
+    background: linear-gradient(270deg, #FFF 0%, #E195DE 0.01%, #FFF 101.25%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-mask-image: linear-gradient(90deg, rgba(0, 255, 0, .3) 0%, #ff2626 50%, rgba(255, 0, 0, .3) 100%);
+    -webkit-mask-size: 200%;
+    animation: wave 2s infinite;
 }
 @media (max-width: 1230px) {
     body.lock {
