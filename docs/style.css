@@ -356,9 +356,7 @@ h3 {
     margin-top: -80px;
 }
 
-
 .cases h1 {
-    font-size: 70px;
     text-align: center;
     background: linear-gradient(270deg, #5824EC 0%, #4AFFFB 101.25%);
     background-clip: text;
@@ -1032,13 +1030,18 @@ footer {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    padding-top: 40px;
-    margin-left: 40px
+    padding-top: 0px;
+    margin-left: 40px;
+    
+}
+.person_info a{
+    font-size: 50px;
+    text-align: end;
 }
 .person_info{
     display: flex;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: center;
     margin-bottom: 40px;
 }
 .video_div_youtube h2{
@@ -1117,6 +1120,9 @@ footer {
     animation: wave 2s infinite;
 }
 @media (max-width: 1230px) {
+    .about_me .orng_txt, .price .grn_txt, .feedback .center_txt a{
+        font-size: 70px;
+    }
     body.lock {
         overflow: hidden;
     }
@@ -1265,26 +1271,53 @@ footer {
 
     }
 }
+@media (max-width: 875px){
+    .price .grn_txt a{
+        font-size: 60px;
+    }
+    .footer p{
+        display: none;
+    }
+}
+@media (max-width: 635px){
+    .footer h1{
+        display: none;
+    }
+}
 
 @media (max-width: 860px) {
-    .content h3 {
+    .content h3, .price_div p {
         width: auto;
         margin-left: 10px;
         text-align: center;
     }
-
+    .price .grn_txt, .orng_txt{
+        text-align: center;
+        margin: 0px;
+    }
     .content h1 {
-        font-size: 50px;
+        font-size: 70px;
         margin-left: 10px;
         text-align: center;
     }
+    .div_about_me div:not(.div_me) p{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
-
-@media (max-width: 1368px) {
-    .image {
+@media (max-width: 951px){
+    .price_div img{
         display: none;
     }
-
+}
+@media (max-width: 1368px) {
+    .about_me .center_txt{
+        font-size: 70px;
+    }
+    .image, .div_about_me div div, .div_me {
+        display: none;
+    }
     .cases .video_div {
         justify-content: space-evenly;
     }
@@ -1296,10 +1329,62 @@ footer {
     .main_page {
         justify-content: space-around;
     }
-
+    .div_about_me div:not(.div_me) p{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
     #buy_under_text {
         margin-top: 0px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+@media (max-width: 1140px){
+    .price .grn_txt{
+        font-size: 70px;
+    }
+}
+@media (max-width: 780px){
+    .price .grn_txt a{
+        font-size: 50px;
+    }
+    .price .price_div p{
+        margin-top: 0px;
+        font-size: 34px;
+    }
+    .div_about_me div:not(.div_me) p{
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+@media (max-width: 670px){
+    .center_txt .grn_txt{
+        text-align: center;
+    }
+}
+@media (max-width: 550px){
+    .main_page .content h1{
+        font-size: 50px;
+    }
+    .grn_txt a{
+        font-size: 40px;
+    }
+
+
+}
+@media (max-width: 600px){
+    .price .price_div p{
+        text-align: left;
+        font-size: 30px;
+    }
+    .price .grn_txt a{
+        font-size: 38px;
+    }
+}
+@media (max-width: 455px){
+    .div_about_me div:not(.div_me) p{
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
