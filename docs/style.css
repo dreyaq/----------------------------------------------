@@ -888,8 +888,8 @@ footer {
     height: 482px;
 }
 
-.youtube_text {
-    margin-left: 60px !important;
+#for_youtube {
+    margin-left: 60px;
 }
 
 #wait_for_orders {
@@ -977,7 +977,7 @@ footer {
     text-align: center;
 }
 .learning img{
-    max-width: 1200px;
+    max-width: 90%;
     border-radius: 100px;
 }
 .learning{
@@ -994,7 +994,7 @@ footer {
     text-align: center;
 }
 .learning iframe{
-    width: 1200px;
+    width: 90%;
     height: 675px;
     border-radius: 100px;
 }
@@ -1119,8 +1119,12 @@ footer {
     -webkit-mask-size: 200%;
     animation: wave 2s infinite;
 }
+#price_youtube{
+    display: flex; 
+    justify-content: flex-end;
+}
 @media (max-width: 1230px) {
-    .about_me .orng_txt, .price .grn_txt, .feedback .center_txt a{
+    .about_me .orng_txt, .price .grn_txt, .feedback .center_txt a,{
         font-size: 70px;
     }
     body.lock {
@@ -1272,7 +1276,7 @@ footer {
     }
 }
 @media (max-width: 875px){
-    .price .grn_txt a{
+    .price .grn_txt a, .price_example .grn_txt {
         font-size: 60px;
     }
     .footer p{
@@ -1291,7 +1295,7 @@ footer {
         margin-left: 10px;
         text-align: center;
     }
-    .price .grn_txt, .orng_txt{
+    .price .grn_txt, .grn_txt, .orng_txt{
         text-align: center;
         margin: 0px;
     }
@@ -1307,7 +1311,7 @@ footer {
     }
 }
 @media (max-width: 951px){
-    .price_div img{
+    .price_div img, .price_main_div img{
         display: none;
     }
 }
@@ -1340,9 +1344,13 @@ footer {
     }
 }
 @media (max-width: 1140px){
-    .price .grn_txt{
+    .price .grn_txt, .price_example .grn_txt{
         font-size: 70px;
     }
+    #order_main_price{
+        margin-top: 100px;
+    }
+    
 }
 @media (max-width: 780px){
     .price .grn_txt a{
@@ -1362,13 +1370,25 @@ footer {
     .center_txt .grn_txt{
         text-align: center;
     }
+    .about_me_main .orng_txt{
+        font-size: 70px;
+    }
+    .about_me_main img, .about_me_main iframe{
+        border-radius: 70px;
+    }
 }
 @media (max-width: 550px){
     .main_page .content h1{
         font-size: 50px;
     }
     .grn_txt a{
-        font-size: 40px;
+        font-size: 30px;
+    }
+    .about_me_main .orng_txt{
+        font-size: 60px;
+    }
+    .about_me_main img, .about_me_main iframe{
+        border-radius: 50px;
     }
 
 
@@ -1377,14 +1397,54 @@ footer {
     .price .price_div p{
         text-align: left;
         font-size: 30px;
+
     }
     .price .grn_txt a{
-        font-size: 35px;
+        font-size: 30px;
     }
 }
 @media (max-width: 455px){
     .div_about_me div:not(.div_me) p{
         margin-left: 0px;
         margin-right: 0px;
+    }
+}
+@media (max-width: 750px){
+    .avatar_info div{
+        display: none;
+    }
+    .avatar_info{
+        justify-content: space-around;
+    }
+    .feedback_main h1{
+        font-size: 60px;
+    }
+}
+@media (max-width: 1330px){
+    .price_example iframe{
+        display: none;
+    }
+    #for_youtube, #h2_4{
+        margin-left: 0px;
+    }
+    #price_youtube{
+        display: flex; 
+        justify-content: flex-start;
+    }
+    #h2_1,#h2_2,#h2_3,#h2_4{
+        font-size: 10vw;
+        text-align: center;
+    }
+}
+@media (max-width: 790px){
+    #order_main_price, .price_example .grn_txt, #wait_for_orders{
+        font-size: 9vw;
+        margin-left: 0px;
+        text-align: center;
+    }
+    .price_main_div p, .about_video p{
+        margin-left: 0px;
+        font-size: 8vw;
+
     }
 }

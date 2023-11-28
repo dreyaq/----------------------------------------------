@@ -78,7 +78,7 @@
                 <h1 class="orng_txt" style="display: inline;">Достижения</h1>
             </div>
             <div class="achievements_div">
-                <div class="swiper-container">
+                <div class="swiper swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="achievement-card">
@@ -195,17 +195,23 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://profi.ru/jqs/widget/widget.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 2,
+        var swiper = new Swiper('.swiper-container', {
+                    breakpoints: {
+                    0: {
+                    slidesPerView: 1, 
+                    },
+                    1200:{
+                    slidesPerView: 2,
+                    }
+                },
+                slidesPerView: 1,
                 spaceBetween: 50,
-                loop: true, // Добавлен параметр loop
+                loop: true,
                 autoplay: {
-                    delay: 5000, // задержка в миллисекундах (5 секунд)
-                    disableOnInteraction: false, // оставить автовоспроизведение после взаимодействия пользователя
+                    delay: 5000,
+                    disableOnInteraction: false,
                 },
             });
-        });
     </script>
 </body>
 
