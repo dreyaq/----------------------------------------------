@@ -44,37 +44,6 @@
 
 }
 
-
-
-
-@font-face {
-    font-family: 'gilroy';
-    src: url('./fonts/gilroy-regular-webfont.eot');
-    src: url('./fonts/gilroy-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/gilroy-regular-webfont.woff2') format('woff2'),
-         url('./fonts/gilroy-regular-webfont.woff') format('woff'),
-         url('./fonts/gilroy-regular-webfont.ttf') format('truetype'),
-         url('./fonts/gilroy-regular-webfont.svg#gilroyregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'gilroy';
-    src: url('./fonts/gilroy-bold-webfont.eot');
-    src: url('./fonts/gilroy-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./fonts/gilroy-bold-webfont.woff2') format('woff2'),
-         url('./fonts/gilroy-bold-webfont.woff') format('woff'),
-         url('./fonts/gilroy-bold-webfont.ttf') format('truetype'),
-         url('./fonts/gilroy-bold-webfont.svg#gilroybold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-
-}
 html {
     width: 100%;
     min-height: 100%;
@@ -411,7 +380,7 @@ h3 {
     margin-top: 22px;
     margin-bottom: 43px;
     color: #FFF;
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 40px;
     font-style: normal;
     font-weight: 300;
@@ -420,7 +389,7 @@ h3 {
 
 .cases p {
     color: #FFF;
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 30px;
     font-style: normal;
     font-weight: 300;
@@ -672,7 +641,7 @@ h3 {
     margin: 0px;
     margin-left: 50px;
     color: #FFF;
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 34px;
     font-style: normal;
     font-weight: 300;
@@ -686,7 +655,7 @@ h3 {
 
 .footer p {
     color: #FFF;
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
@@ -708,7 +677,7 @@ h3 {
 
 .footer a {
     color: #FFF;
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
@@ -772,7 +741,7 @@ footer {
 
 .feedback_card h2 {
     color: rgb(255, 255, 255);
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 60px;
     margin: 0px;
     margin-right: 50px;
@@ -1029,7 +998,7 @@ footer {
 }
 .learning h2{
     color: rgb(255, 255, 255);
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 60px;
     margin: 10px;
     text-align: center;
@@ -1066,7 +1035,7 @@ footer {
 }
 .person_info p{
     color: #FFF;
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 40px;
     font-style: normal; 
     font-weight: 300;
@@ -1124,7 +1093,7 @@ footer {
 }
 .video_div_youtube p{
     color: #FFF;
-    font-family: Gilroy;
+    font-family: Roboto;
     font-size: 35px;
     font-style: normal;
     font-weight: 300;
