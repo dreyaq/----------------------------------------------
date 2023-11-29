@@ -1,39 +1,60 @@
-@font-face {
-    font-family: Inter;
-    src: url('../fonts/inter/Inter-Regular.eot');
-    src: local('Inter Regular'), local('Inter-Regular'),
-        url('../fonts/inter/Inter-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/inter/Inter-Regular.woff2') format('woff2'),
-        url('../fonts/inter/Inter-Regular.woff') format('woff'),
-        url('../fonts/inter/Inter-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
-    font-family: Gilroy;
-    src: url('../fonts/gilory/Gilroy-Regular.eot');
-    src: local('Gilroy Regular'), local('Gilroy-Regular'),
-        url('../fonts/gilory/Gilroy-Regular.woff2') format('woff2'),
-        url('../fonts/gilory/Gilroy-Regular.woff') format('woff'),
-        url('../fonts/gilory/Gilroy-Regular.ttf') format('truetype'),
-        url('../fonts/gilory/Gilroy-Regular.eot?#iefix') format('embedded-opentype');
+    font-family: 'grandstanderthin';
+    src: url('./fonts/grandstander-variablefont_wght-webfont.woff2') format('woff2'),
+         url('./fonts/grandstander-variablefont_wght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
+
+
+
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../fonts/opensans/OpenSans-Regular.eot');
-    src: local('Open Sans Regular'), local('OpenSans-Regular'),
-        url('../fonts/opensans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/opensans/OpenSans-Regular.woff2') format('woff2'),
-        url('../fonts/opensans/OpenSans-Regular.woff') format('woff'),
-        url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+    font-family: 'open_sansregular';
+    src: url('./fonts/opensans-variablefont_wdthwght-webfont.woff2') format('woff2'),
+         url('./fonts/opensans-variablefont_wdthwght-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
+
+
+
+@font-face {
+    font-family: 'interregular';
+    src: url('./fonts/inter-variablefont_slntwght-webfont.woff2') format('woff2'),
+         url('./fonts/inter-variablefont_slntwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'gilroyregular';
+    src: url('./fonts/gilroy-regular-webfont.woff2') format('woff2'),
+         url('./fonts/gilroy-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'gilroybold';
+    src: url('./fonts/gilroy-bold-webfont.woff2') format('woff2'),
+         url('./fonts/gilroy-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 html {
     width: 100%;
     min-height: 100%;
