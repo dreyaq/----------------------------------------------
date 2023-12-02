@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Динамическое обновление при прокрутке</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    #contentContainer {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .content {
+      height: 150px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      background-color: #fff;
+      border-radius: 4px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .content:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div id="contentContainer">
+  <!-- Ваш изначальный контент -->
+  <div class="content">Содержимое 1</div>
+  <div class="content">Содержимое 2</div>
+  <div class="content">Содержимое 3</div>
+</div>
+
+<script>
+  // Функция для проверки, достигли ли мы конца страницы
+  function isEndOfPage() {
+    const contentContainer = document.getElementById('contentContainer');
+    const lastContent = contentContainer.lastElementChild;
+
+    const lastContentOffset = lastContent.offsetTop + lastContent.clientHeight;
+    const pageOffset = window.pageYOffset + window.innerHeight;
+
+    return pageOffset > lastContentOffset;
+  }
+
+  // Функция для добавления нового контента
+  function addNewContent() {
+    const contentContainer = document.getElementById('contentContainer');
+
+    // Создаем новый блок контента
+    const newContent = document.createElement('div');
+    newContent.className = 'content';
+    newContent.textContent = 'Новое содержимое';
+
+    // Добавляем его к остальному контенту
+    contentContainer.appendChild(newContent);
+  }
+
+  // Функция-обработчик события прокрутки страницы
+  function handleScroll() {
+    if (isEndOfPage()) {
+      addNewContent();
+    }
+  }
+
+  // Добавляем обработчик события прокрутки
+  window.addEventListener('scroll', handleScroll);
+</script>
+
+</body>
+</html>

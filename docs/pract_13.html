@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        #image-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #centered-image {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="centered-image" src="./assets/img/avatar1.png" alt="Centered Image">
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageContainer = document.getElementById('image-container');
+            const centeredImage = document.getElementById('centered-image');
+
+            function centerImage() {
+                const containerWidth = imageContainer.offsetWidth;
+                const containerHeight = imageContainer.offsetHeight;
+
+                const imageWidth = centeredImage.width;
+                const imageHeight = centeredImage.height;
+
+                const offsetX = (containerWidth - imageWidth) / 2;
+                const offsetY = (containerHeight - imageHeight) / 2;
+
+                centeredImage.style.left = offsetX + 'px';
+                centeredImage.style.top = offsetY + 'px';
+            }
+
+            centerImage();
+
+            window.addEventListener('resize', centerImage);
+
+            imageContainer.addEventListener('click', function (event) {
+                const x = event.clientX - imageContainer.offsetLeft;
+                const y = event.clientY - imageContainer.offsetTop;
+
+                console.log(`Clicked at (${x}, ${y})`);
+            });
+        });
+    </script>
+</body>
+</html>

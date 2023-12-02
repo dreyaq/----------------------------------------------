@@ -97,6 +97,16 @@
     #add-button:hover {
       background-color: #45a049;
     }
+    .notification button.close-button {
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
   </style>
 </head>
 <body>
@@ -111,7 +121,8 @@
   <ul id="list"></ul>
 </div>
 <button id="add-button" onclick="createListItem()">Добавить пункт</button>
-<button onclick="showNotification_button({ content: 'Пример уведомления' })" id="add-button">Показать уведомление</button>
+<button id="add-button"onclick="showNotification_button({ content: 'Пример уведомления' })">Показать уведомление</button>
+
 <script>
   let notificationCount = 0;
   let notificationInterval;
@@ -153,19 +164,27 @@
 
 
   function showNotification_button(options) {
-    const notificationElement = document.createElement('div');
-    notificationElement.classList.add('notification');
-    notificationElement.innerHTML = options.content;
+  const notificationElement = document.createElement('div');
+  notificationElement.classList.add('notification');
+  notificationElement.innerHTML = `${options.content}<button class="close-button" onclick="closeNotification(this)">Закрыть</button>`;
 
-    document.body.appendChild(notificationElement);
+  document.body.appendChild(notificationElement);
 
+  setTimeout(() => {
+    notificationElement.classList.add('hide');
     setTimeout(() => {
-      notificationElement.classList.add('hide');
-      setTimeout(() => {
-        notificationElement.remove();
-      }, 500);
-    }, 1500);
-  }
+      notificationElement.remove();
+    }, 500);
+  }, 1500);
+}
+function closeNotification(button) {
+  const notificationElement = button.parentNode;
+  notificationElement.classList.add('hide');
+  setTimeout(() => {
+    notificationElement.remove();
+  }, 500);
+}
+
 
   startNotificationInterval();
 </script>

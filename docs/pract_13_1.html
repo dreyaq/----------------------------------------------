@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll; /* Разрешить вертикальный скролл */
+        }
+
+        .parallax-container {
+            position: relative;
+            overflow: hidden;
+            height: 200vh; /* Увеличьте высоту контейнера */
+        }
+
+        .parallax-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./assets/img/delete/1.jpg') center/cover no-repeat; /* Замените 'your-image.jpg' на ваше изображение */
+            transform: translateZ(-1px) scale(1.5);
+            will-change: transform; /* Оптимизация для производительности */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+    <title>Parallax Effect</title>
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-background"></div>
+        <div class="content">
+            <h1>Parallax Effect</h1>
+            <p style="font-family: Inter; font-size: 40px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem modi nihil minus veniam ad. Magni dolorem deserunt voluptatibus magnam porro sequi, optio obcaecati veritatis iste, adipisci non iusto numquam nostrum, dignissimos accusamus cum beatae quibusdam sed voluptates ab officiis eligendi alias tempore explicabo. Saepe, impedit esse natus quisquam consequatur similique autem corrupti vel porro, nobis necessitatibus numquam. At quod dolore, blanditiis facere cumque, praesentium obcaecati nihil consequatur natus voluptatum nam omnis vero, id voluptatibus commodi nostrum quam tempore provident ipsa qui ullam unde necessitatibus ad eos. Quod nam nihil incidunt nisi voluptatum maxime asperiores doloribus tenetur? Iure, consequatur quae facilis corrupti quo soluta hic, reprehenderit nesciunt eaque, provident laudantium tenetur voluptatem modi optio eligendi minus dolorem vel impedit numquam dicta porro exercitationem. Ex illo doloremque maiores non accusantium aliquid ullam excepturi. Voluptates officiis velit ex animi reprehenderit quidem explicabo, laborum nisi quibusdam, voluptatum tempora! Velit ex facilis eum odit natus quae animi sed quaerat perspiciatis voluptates, cupiditate blanditiis. Nostrum distinctio laboriosam veniam vitae voluptatibus quisquam, pariatur, quis accusamus velit sed obcaecati impedit sint deleniti quod inventore deserunt? Quos inventore cupiditate impedit omnis fuga aspernatur, asperiores magni et cum neque possimus pariatur incidunt temporibus reiciendis quam nostrum ratione rerum deleniti! Vero, perferendis quos. Vero officia sit atque laborum, nulla culpa dolorem vel debitis tempore delectus accusamus veritatis. Itaque excepturi nisi beatae voluptatum illum officiis a, repellat provident enim totam voluptas magnam ab esse eos nemo vel consequatur. A ut velit fugiat. Culpa aut accusantium voluptates magnam sunt eveniet necessitatibus expedita perferendis reprehenderit dolorem. Eum necessitatibus eligendi, et dolore molestiae corrupti? Mollitia architecto harum atque recusandae vel, quisquam at quas accusantium suscipit ad perspiciatis natus rem, adipisci amet eum dolores quidem eligendi praesentium magni reiciendis! Omnis assumenda ex nulla, sapiente optio adipisci quaerat minima necessitatibus harum eius culpa provident tempore tenetur alias quae. Eum et blanditiis minus autem commodi, in animi repudiandae porro! Aliquam consequatur dolorum delectus laborum aperiam aut minima ipsam, quod molestias nemo praesentium perferendis est quam labore! Libero necessitatibus excepturi doloremque non unde, numquam eligendi corporis, maiores nam aut eveniet, culpa adipisci maxime hic iste officiis officia quos fugiat harum ullam! Repudiandae sequi similique libero, soluta, possimus quia ad magni ea ratione ipsum quae ut velit aspernatur, dolore pariatur a dolorem quis earum vero! Deleniti, minima praesentium similique repudiandae asperiores hic, eaque minus totam alias suscipit labore nemo sapiente saepe voluptates animi provident ea debitis architecto ratione sit deserunt, exercitationem voluptatibus. Voluptate, ipsam ullam odit rerum labore repellendus! Ducimus provident sit quae quaerat soluta fugit laudantium recusandae itaque consectetur placeat sed asperiores qui quasi distinctio obcaecati sequi, atque nam suscipit dignissimos cum officiis? Eos, inventore reiciendis iusto obcaecati voluptate veniam corrupti voluptatem impedit cum laudantium illo at a quia culpa ad magnam beatae debitis praesentium libero consequatur enim. Natus dolore explicabo obcaecati quod nobis autem quos iure velit corrupti, odit voluptate atque dolorem enim deleniti aperiam, reiciendis dignissimos numquam blanditiis perferendis, saepe id distinctio eveniet! Distinctio quae, vitae laborum obcaecati magnam atque, possimus, at molestiae aperiam excepturi nulla!</p> </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let parallaxBackground = document.querySelector('.parallax-background');
+
+            window.addEventListener('scroll', function () {
+                let scrollPosition = window.scrollY;
+                parallaxBackground.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+            });
+        });
+    </script>
+</body>
+</html>
